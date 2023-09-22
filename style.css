@@ -1,15 +1,62 @@
-<<<<<<< HEAD
+
 *, *::after, *::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-=======
-* {
     font-family: 'Inter', sans-serif;
 }
 
+
+nav {
+    height: 10%;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+    background-color: aqua;
+}
+
+nav > ul{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+ 
+
+
+nav > ul > li > input {
+    border-radius: 10px;
+}
+
+nav  li {
+    list-style: none;
+}
+
+nav .logoImg {
+    width: 3%;
+    height: 3%;
+    border: 0.5px solid black;
+    border-radius: 50%;
+}
+
+nav .logoImg > img {
+    width: 100%;
+    border-radius: 50%;
+    
+}
+
+nav > ul > li > .signInBtn {
+    padding: 0.2rem 2rem;
+    border-radius: 15px;
+    background-color: white;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+ 
 .product.container {
     display: flex;
     background-color: red;
