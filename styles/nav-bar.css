@@ -73,51 +73,78 @@ nav.mobileVersion {
   }
   
   nav.mobileVersion {
-      display: block;
-  }
-  
-  
-  /* Nav Desctop Verion */
-  nav.desctopVersion {
-      height: 10%;
-      margin-bottom: 1rem;
-      padding: 2rem 3rem;
       display: none;
   }
   
-  nav.desctopVersion ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
   
-  .LogoAndTitle,
-  .userInfo {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  
-  nav.desctopVersion ul li {
-      list-style: none;
-  }
-  
-  nav.desctopVersion .logoImage {
-      width: 3.5rem;
-      height: 3.5rem;
-  }
-  
-  nav.desctopVersion .imageItem {
-      width: 2rem;
-      height: 2rem;
-  }
-  
-  nav.desctopVersion .logoImage > img, 
-  nav.desctopVersion .imageItem > svg {
-      width: 100%;
-  }
-  
-  .userInfo li,
-  .LogoAndTitle li {
-      margin : 1rem;
-  }
+ /* Nav Desctop Verion */
+nav.desctopVersion {
+    height: 4rem;
+    margin-bottom: 1rem;
+    padding: 0 5rem;
+    display: block;
+    background-color: aqua;
+}
+
+nav.desctopVersion > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LogoAndTitle,
+.userInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav.desctopVersion ul li {
+    list-style: none;
+}
+
+nav.desctopVersion ul li > a {
+    text-decoration: none;
+    color: black;
+}
+
+nav.desctopVersion .logoImage {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+nav.desctopVersion .imageItem {
+    width: 2rem;
+    height: 2rem;
+}
+
+nav.desctopVersion .logoImage > img, 
+nav.desctopVersion .imageItem > svg {
+    width: 100%;
+}
+
+nav.desctopVersion .logoImage > img {
+    border: 0.5px solid #adb1b4 ;
+    border-radius: 50%;
+}
+
+.titleSila {
+    font-size: 2rem;
+    background: -webkit-linear-gradient(rgba(254,122,0,1), rgba(32,95,219,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.desctopVersion .inputArea {
+    width: 20rem;
+}
+
+.desctopVersion input {
+    border-radius: 15px;
+    width: 100%;
+    padding: 0.3rem 0;
+    text-align: left;
+    background-color: rgb(221, 224, 227);
+    text-align: center;
+}
