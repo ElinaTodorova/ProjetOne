@@ -1,49 +1,92 @@
-.product.container {
-    display: flex;
-    background-color: red;
-    height: 100rem;
 
+
+body .allProducts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(241, 241, 241);
 }
 
-.product.callofduty {
+.container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: white;
-    height: 24rem;
-    width: 25%;
-    border-radius: 15px;
-    margin: 1rem;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height: 30rem;
+    width: 21%;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 3px;
 }
 
-.callofdutyimg {
+.productImg {
+    display: block;
+    height: 60%;
+    border-radius: 20px;
+    margin-top: 1%;
+    background-size: cover;
+
+
+}
+
+.productContainer {
     display: flex;
     width: 100%;
-    height: 17rem;
-    border-radius: 20px;
-    margin-top: 2%;
 
 }
 
-.box.product {
+.boxProduct {
     display: flex;
     flex-direction: column;
-    width: 95%;
-
-}
-
-.product.price {
-    margin-top: 5%;
-    font-size: 170%;
-    color: rgb(224, 126, 14);
+    width: 100%;
 }
 
 .console {
     color: grey;
-    font-size: 80%;
+    font-weight: 700;
+    margin-top: 5%;
 }
 
-.game.name {
+.gameName {
     font-weight: bold;
+    margin-top: 2%;
+    font-size: 150%;
+}
+
+.poductPrice {
+    color: rgb(255, 132, 0);
+    font-weight: bold;
+    font-size: 150%;
+    margin-top: 15%;
+
+}
+
+.button-box {
+    display: flex;
+    width: 25rem;
+    margin: 2rem;
+    border-radius: 30px;
+    background: #fff;
+    border: solid red;
+}
+
+.toggle-btn {
+    display: flex;
+    padding-top: 1rem;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    text-align: center;
+}
+
+.btn {
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3rem;
+    background: #e67e22;
+}
+
+.form-box {
+    display: flex;
+
 }
