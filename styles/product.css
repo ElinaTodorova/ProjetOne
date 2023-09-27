@@ -1,6 +1,4 @@
-* {
-    font-family: 'Inter', sans-serif;
-}
+
 
 body .allProducts {
     display: flex;
@@ -90,4 +88,5 @@ body .allProducts {
 
 .form-box {
     display: flex;
+
 }

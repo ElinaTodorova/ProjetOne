@@ -1,3 +1,4 @@
+
 const productTable = [
     {
         name: "Call Of Duty",
@@ -171,4 +172,15 @@ function createProduct(name, price, imgURL, platform) {
 productTable.forEach((product) => {
     createProduct(product.name, product.price, product.img, product.console)
 })
+
+
+const menuElement = document.getElementById('menuEl');
+
+menuElement.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  let hiddenList = document.querySelector('.hidden');
+  hiddenList.classList.toggle('visible')
+});
+
 
