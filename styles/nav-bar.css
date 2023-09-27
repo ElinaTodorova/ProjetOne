@@ -82,19 +82,18 @@ nav.mobileVersion {
  /* Nav Desctop Verion */
 nav.desctopVersion {
     height: 4rem;
-    margin-bottom: 1rem;
     padding: 0 5rem;
-    display: block;
     background-color: white;
-    display: block;
-    margin-top: 0.5rem;
-    display: none;
+    position: fixed;
+    width: 100%; 
 }
 
 nav.desctopVersion > ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
 .LogoAndTitle,
