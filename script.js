@@ -177,10 +177,28 @@ productTable.forEach((product) => {
 const menuElement = document.getElementById('menuEl');
 
 menuElement.addEventListener('click', (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  let hiddenList = document.querySelector('.hidden');
-  hiddenList.classList.toggle('visible')
+
+
+    let hiddenList = document.querySelector('.hidden');
+    hiddenList.classList.toggle('visible');
 });
 
+let btnLeft = document.querySelector("#btn-left")
+let bntRight = document.querySelector("#btn-right")
+let btn = document.querySelector(".toggle-btn")
+let translatee = document.querySelector(".btn-translate")
 
+
+btnLeft.onclick = function trans() {
+    translatee.style.transform = "translate(2%)"
+    btnLeft.style.color = "white"
+    bntRight.style.color = "orangered"
+}
+
+bntRight.onclick = function transform() {
+    translatee.style.transform = "translate(97%)"
+    btnLeft.style.color = "orangered"
+    bntRight.style.color = "white"
+}
