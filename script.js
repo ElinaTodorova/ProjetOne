@@ -19,7 +19,7 @@ const productTable = [
         console: "Xbox PS5 PC"
     },
     {
-        name: "Red Dead Redemption 2",
+        name: "Red Dead",
         price: "35.99$",
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
@@ -165,6 +165,11 @@ function createProduct(name, price, imgURL, platform) {
     productPrice.classList.add("poductPrice")
     productPrice.innerHTML = `${price}`
     boxProduct.appendChild(productPrice)
+
+    let addToCart = document.createElement("button")
+    addToCart.classList.add("addToCart")
+    addToCart.innerHTML = `Add to Cart`
+    boxProduct.appendChild(addToCart)
 
 }
 
