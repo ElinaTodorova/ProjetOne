@@ -138,12 +138,16 @@ body .allProducts {
 }
 
 .container:hover {
-    scale: 1.1;
+    scale: 1.05;
     background-color: white;
+    transition: 0.5s;
 
     .addToCart {
         background-color: orangered;
     }
+
+
+
 }
 
 @media screen and (width < 768px) {}
