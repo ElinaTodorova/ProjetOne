@@ -55,7 +55,7 @@ body .allProducts {
 }
 
 .poductPrice {
-    color: rgb(255, 132, 0);
+    color: #FE7A00;
     font-weight: bold;
     font-size: 150%;
     margin-top: 10%;
@@ -97,7 +97,7 @@ body .allProducts {
     background: transparent;
     width: 50%;
     border-radius: 30px;
-    color: orangered;
+    color: FE7A00ed;
 
 }
 
@@ -110,7 +110,7 @@ body .allProducts {
 
 .btn-translate {
     display: flex;
-    background-color: orangered;
+    background-color: #FE7A00;
     border-radius: 30px;
     width: 50%;
     height: 90%;
@@ -128,7 +128,7 @@ body .allProducts {
 
 .addToCart {
     border-radius: 20px;
-    background-color: rgb(255, 143, 103);
+    background-color: #FE7A00;
     color: white;
     border: none;
     width: 90%;
@@ -143,7 +143,7 @@ body .allProducts {
     transition: 0.5s;
 
     .addToCart {
-        background-color: orangered;
+        background-color: #FE7A00;
     }
 
 
