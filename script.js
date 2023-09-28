@@ -131,7 +131,7 @@ console.log(productTable)
 
 function createProduct(name, price, imgURL, platform) {
 
-    console.log('coucou')
+
 
     let container = document.createElement("div");
     container.classList.add("container");
@@ -175,17 +175,17 @@ function createProduct(name, price, imgURL, platform) {
 }
 
 productTable.forEach((product) => {
-  createProduct(product.name, product.price, product.img, product.console);
+    createProduct(product.name, product.price, product.img, product.console);
 });
 
 
 const menuElement = document.getElementById("menuEl");
 
 menuElement.addEventListener("click", (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  let hiddenList = document.querySelector(".hidden");
-  hiddenList.classList.toggle("visible");
+    let hiddenList = document.querySelector(".hidden");
+    hiddenList.classList.toggle("visible");
 
 });
 
@@ -195,16 +195,16 @@ let btn = document.querySelector(".toggle-btn");
 let translatee = document.querySelector(".btn-translate");
 
 btnLeft.onclick = function trans() {
-  translatee.style.transform = "translate(2%)";
-  btnLeft.style.color = "white";
-  bntRight.style.color = "orangered";
+    translatee.style.transform = "translate(2%)";
+    btnLeft.style.color = "white";
+    bntRight.style.color = "orangered";
 };
 
 bntRight.onclick = function transform() {
 
-  translatee.style.transform = "translate(97%)";
-  btnLeft.style.color = "orangered";
-  bntRight.style.color = "white";
+    translatee.style.transform = "translate(97%)";
+    btnLeft.style.color = "orangered";
+    bntRight.style.color = "white";
 };
 
 
@@ -216,14 +216,14 @@ let quantityP = document.createElement('p');
 
 
 buttonAdd.forEach(button => {
-   button.addEventListener('click', () => {
-    quantityCart++;
-    quantityP.textContent = quantityCart;
-    divElement.classList.add('quantityDiv')
-    divElement.appendChild(quantityP);
+    button.addEventListener('click', () => {
+        quantityCart++;
+        quantityP.textContent = quantityCart;
+        divElement.classList.add('quantityDiv')
+        divElement.appendChild(quantityP);
 
-    listItem.appendChild(divElement)
-   })
+        listItem.appendChild(divElement)
+    })
 })
 
 

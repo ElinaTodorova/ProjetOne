@@ -70,6 +70,7 @@ body .allProducts {
     transition: 0.5s;
     position: relative;
     font-weight: 900;
+    color: #FE7A00;
 
 }
 
@@ -255,6 +256,33 @@ body .allProducts {
 
     .productImg {
         height: 100%;
+    }
+
+    .crossImg {
+        display: none;
+    }
+
+    .crossImg img {
+        display: none;
+    }
+
+    .slideBox {
+        display: flex;
+        width: 150%;
+    }
+
+    #titleProducts {
+        font-size: 200%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+    .form-box {
+        margin-bottom: 5%;
+    }
+
+    .important {
+        display: none;
     }
 }
 
