@@ -1,5 +1,5 @@
-
 const productTable = [
+
     {
         name: "Call Of Duty",
         price: "19.99$",
@@ -171,42 +171,59 @@ function createProduct(name, price, imgURL, platform) {
     addToCart.innerHTML = `Add to Cart`
     boxProduct.appendChild(addToCart)
 
-}
 
+}
 
 productTable.forEach((product) => {
-    createProduct(product.name, product.price, product.img, product.console)
-})
-
-
-const menuElement = document.getElementById('menuEl');
-
-menuElement.addEventListener('click', (e) => {
-    e.preventDefault();
-
-
-
-    let hiddenList = document.querySelector('.hidden');
-    hiddenList.classList.toggle('visible');
+  createProduct(product.name, product.price, product.img, product.console);
 });
 
-let btnLeft = document.querySelector("#btn-left")
-let bntRight = document.querySelector("#btn-right")
-let btn = document.querySelector(".toggle-btn")
-let translatee = document.querySelector(".btn-translate")
 
+const menuElement = document.getElementById("menuEl");
+
+menuElement.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  let hiddenList = document.querySelector(".hidden");
+  hiddenList.classList.toggle("visible");
+
+});
+
+let btnLeft = document.querySelector("#btn-left");
+let bntRight = document.querySelector("#btn-right");
+let btn = document.querySelector(".toggle-btn");
+let translatee = document.querySelector(".btn-translate");
 
 btnLeft.onclick = function trans() {
-    translatee.style.transform = "translate(2%)"
-    btnLeft.style.color = "white"
-    bntRight.style.color = "orangered"
-}
+  translatee.style.transform = "translate(2%)";
+  btnLeft.style.color = "white";
+  bntRight.style.color = "orangered";
+};
 
 bntRight.onclick = function transform() {
-    translatee.style.transform = "translate(97%)"
-    btnLeft.style.color = "orangered"
-    bntRight.style.color = "white"
-}
 
-/* slide-------------------------------------------*/
+  translatee.style.transform = "translate(97%)";
+  btnLeft.style.color = "orangered";
+  bntRight.style.color = "white";
+};
+
+
+let quantityCart = 0;
+const buttonAdd = document.querySelectorAll('.addToCart');
+let listItem = document.getElementById('cartItem');
+let divElement = document.createElement('div')
+let quantityP = document.createElement('p');
+
+
+buttonAdd.forEach(button => {
+   button.addEventListener('click', () => {
+    quantityCart++;
+    quantityP.textContent = quantityCart;
+    divElement.classList.add('quantityDiv')
+    divElement.appendChild(quantityP);
+
+    listItem.appendChild(divElement)
+   })
+})
+
 
