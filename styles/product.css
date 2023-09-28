@@ -127,6 +127,7 @@ body .allProducts {
     font-size: 400%;
 }
 
+
 .addToCart {
     border-radius: 20px;
     background-color: #FE7A00;
@@ -150,9 +151,6 @@ body .allProducts {
 
 /* mobil version */
 @media screen and (width < 768px) {
-
-
-
     .toggle-btn {
         border: none;
         background: transparent;
@@ -259,3 +257,4 @@ body .allProducts {
         height: 100%;
     }
 }
+

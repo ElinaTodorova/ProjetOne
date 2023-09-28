@@ -3,7 +3,7 @@ nav.mobileVersion {
     height: 4rem;
     margin-bottom: 1rem;
     padding: 1rem 2rem 1rem 1rem;
-
+    background-color: white;
 }
 
 nav.mobileVersion ul li {
@@ -58,15 +58,17 @@ nav.mobileVersion .visible {
     display: block;
     list-style: none;
     overflow: hidden;
-    width: 5rem;
+    width: 6rem;
     font-family: Arial;
     background-color: rgb(245, 245, 246);
     position: relative;
     z-index: 1;
+    background-color: white;
 }
 
 nav.mobileVersion .visible>li {
-    margin: 0.5rem;
+    margin-right: 1rem;
+    padding: 0.5rem 0.5rem 0.2rem;
 }
 
 #menuEl {
@@ -82,20 +84,19 @@ nav.mobileVersion {
 /* Nav Desctop Verion */
 nav.desctopVersion {
     height: 4rem;
-    margin-bottom: 1rem;
     padding: 0 5rem;
-    display: block;
     background-color: white;
-    display: block;
-    display: none;
     position: fixed;
     width: 100%;
+    display: none;
 }
 
 nav.desctopVersion>ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
 .LogoAndTitle,
@@ -144,16 +145,18 @@ nav.desctopVersion .logoImage>img {
 
 .desctopVersion .inputArea {
     width: 20rem;
+    height: 2.5rem;
 }
 
 .desctopVersion input {
     border: none;
     border-radius: 15px;
     width: 100%;
-    padding: 0.3rem 0;
-    text-align: left;
+    padding: 0.5rem;
+    /*height: 1.5rem;*/
     background-color: rgb(221, 224, 227);
     text-align: center;
+
 }
 
 .desctopVersion .signInItem,
