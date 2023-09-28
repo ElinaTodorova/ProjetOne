@@ -206,6 +206,7 @@ bntRight.onclick = function transform() {
 }
 
 
+
 let quantityCart = 0;
 const buttonAdd = document.querySelectorAll('.addToCart');
 let listItem = document.getElementById('cartItem');
@@ -223,3 +224,4 @@ buttonAdd.forEach(button => {
     listItem.appendChild(divElement)
    })
 })
+

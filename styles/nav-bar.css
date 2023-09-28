@@ -90,7 +90,7 @@ nav.desctopVersion {
     width: 100%;
     z-index: 1;
     display: none;
-    
+    z-index: 1;
 }
 
 nav.desctopVersion>ul {
@@ -162,7 +162,7 @@ nav.desctopVersion .logoImage>img {
 }
 
 .desctopVersion .signInItem,
-.desctopVersion .logInItem{
+.desctopVersion .logInItem {
     margin-right: 3rem;
 }
 
@@ -170,7 +170,7 @@ nav.desctopVersion .logoImage>img {
     width: 5rem;
 }
 
-.desctopVersion .signInItem > a {
+.desctopVersion .signInItem>a {
     width: 100%;
     border: 0.5px solid black;
     border-radius: 15%;
@@ -191,6 +191,7 @@ nav.desctopVersion .logoImage>img {
     nav.mobileVersion {
         display: none;
     }
+
 
 }
 
@@ -220,4 +221,5 @@ nav.desctopVersion .logoImage>img {
     color: rgb(254, 122, 0);
     font-weight: bold;
 }
+
 
