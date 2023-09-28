@@ -3,93 +3,95 @@ nav.mobileVersion {
     height: 4rem;
     margin-bottom: 1rem;
     padding: 1rem 2rem 1rem 1rem;
-    
-  }
-  
-  nav.mobileVersion ul li {
-      list-style: none;
-  }
-  
-  nav.mobileVersion ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-     
-  }
-  
-  nav.mobileVersion .image {
-      width: 2.5rem;
-      height: 2.5rem;
-  }
-  
-  nav.mobileVersion .image > img,
-  nav.mobileVersion .image > svg {
-      width: 100%;
-  }
-  
-  nav.mobileVersion .image > img {
-      border: 0.5px solid #adb1b4 ;
-      border-radius: 50%;
-  }
-  
-  nav.mobileVersion svg.image {
-      fill: rgb(60, 61, 61);
-  }
-  
-  nav.mobileVersion input {
-      border-radius: 15px;
-      padding: 0.3rem;
-      margin-left: 1.3rem;
-      text-align: left;
-      background-color: rgb(221, 224, 227);
-  }
-  
-  nav.mobileVersion .hidden {
-      display: none;
-  }
-  
-  nav.mobileVersion .hidden > li > a {
-      text-decoration: none;
-      color : black;
-      
-  }
-  
-  nav.mobileVersion .visible {
-      display: block;
-      list-style: none; 
-      overflow: hidden; 
-      width: 5rem;
-      font-family: Arial;
-      background-color: rgb(245, 245, 246);
-      position: relative;
-      z-index: 1;
-  }
-  
-  nav.mobileVersion .visible > li {
-    margin:0.5rem;
-  }
-  
-  #menuEl {
-      background-color: white;
-      border: none;
-  }
-  
-  nav.mobileVersion {
-      display: block;
-  }
-  
-  
- /* Nav Desctop Verion */
+    background-color: white;
+}
+
+nav.mobileVersion ul li {
+    list-style: none;
+}
+
+nav.mobileVersion ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav.mobileVersion .image {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+nav.mobileVersion .image>img,
+nav.mobileVersion .image>svg {
+    width: 100%;
+}
+
+nav.mobileVersion .image>img {
+    border: 0.5px solid #adb1b4;
+    border-radius: 50%;
+}
+
+nav.mobileVersion svg.image {
+    fill: rgb(60, 61, 61);
+}
+
+nav.mobileVersion input {
+    border-radius: 15px;
+    padding: 0.3rem;
+    margin-left: 1.3rem;
+    text-align: left;
+    background-color: rgb(221, 224, 227);
+}
+
+nav.mobileVersion .hidden {
+    display: none;
+}
+
+nav.mobileVersion .hidden>li>a {
+    text-decoration: none;
+    color: black;
+
+}
+
+nav.mobileVersion .visible {
+    display: block;
+    list-style: none;
+    overflow: hidden;
+    width: 6rem;
+    font-family: Arial;
+    background-color: rgb(245, 245, 246);
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+
+nav.mobileVersion .visible>li {
+    margin-right: 1rem;
+    padding: 0.5rem 0.5rem 0.2rem;
+}
+
+#menuEl {
+    background-color: white;
+    border: none;
+}
+
+nav.mobileVersion {
+    display: block;
+}
+
+
+/* Nav Desctop Verion */
 nav.desctopVersion {
     height: 4rem;
     padding: 0 5rem;
     background-color: white;
     position: fixed;
-    width: 100%; 
+    width: 100%;
     display: none;
 }
 
-nav.desctopVersion > ul {
+nav.desctopVersion>ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,7 +111,7 @@ nav.desctopVersion ul li {
     list-style: none;
 }
 
-nav.desctopVersion ul li > a {
+nav.desctopVersion ul li>a {
     text-decoration: none;
     color: black;
 }
@@ -124,36 +126,34 @@ nav.desctopVersion .imageItem {
     height: 2rem;
 }
 
-nav.desctopVersion .logoImage > img, 
-nav.desctopVersion .imageItem > svg {
+nav.desctopVersion .logoImage>img,
+nav.desctopVersion .imageItem>svg {
     width: 100%;
 }
 
-nav.desctopVersion .logoImage > img {
-    border: 0.5px solid #adb1b4 ;
+nav.desctopVersion .logoImage>img {
+    border: 0.5px solid #adb1b4;
     border-radius: 50%;
 }
 
 .titleSila {
     font-size: 2rem;
-    background: -webkit-linear-gradient(rgba(254,122,0,1), rgba(32,95,219,1));
+    background: -webkit-linear-gradient(rgba(254, 122, 0, 1), rgba(32, 95, 219, 1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .desctopVersion .inputArea {
     width: 20rem;
-    height: 2rem;
-    
+    height: 2.5rem;
 }
 
 .desctopVersion input {
     border: none;
     border-radius: 15px;
     width: 100%;
-    padding: 0.3rem;
-    height: 1.5rem;
-    text-align: left;
+    padding: 0.5rem;
+    /*height: 1.5rem;*/
     background-color: rgb(221, 224, 227);
     text-align: center;
 
@@ -189,5 +189,6 @@ nav.desctopVersion .logoImage > img {
     nav.mobileVersion {
         display: none;
     }
+
 }
 
