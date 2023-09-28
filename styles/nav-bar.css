@@ -88,7 +88,9 @@ nav.desctopVersion {
     background-color: white;
     position: fixed;
     width: 100%;
+    z-index: 1;
     display: none;
+    
 }
 
 nav.desctopVersion>ul {
@@ -144,7 +146,7 @@ nav.desctopVersion .logoImage>img {
 }
 
 .desctopVersion .inputArea {
-    width: 20rem;
+    width: 30rem;
     height: 2.5rem;
 }
 
@@ -190,5 +192,32 @@ nav.desctopVersion .logoImage>img {
         display: none;
     }
 
+}
+
+/* Quantity items in cart*/
+
+#cartItem {
+    position: relative;
+}
+
+.quantityDiv{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.quantityDiv {
+    height: 1rem;
+    width: 1rem;
+    border: 0.5px solid black;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.quantityDiv p {
+    font-size: 0.7rem;
+    text-align: center;
+    color: rgb(254, 122, 0);
+    font-weight: bold;
 }
 

@@ -1,4 +1,3 @@
-
 const productTable = [
     {
         name: "Call Of Duty",
@@ -184,8 +183,6 @@ const menuElement = document.getElementById('menuEl');
 menuElement.addEventListener('click', (e) => {
     e.preventDefault();
 
-
-
     let hiddenList = document.querySelector('.hidden');
     hiddenList.classList.toggle('visible');
 });
@@ -207,3 +204,22 @@ bntRight.onclick = function transform() {
     btnLeft.style.color = "orangered"
     bntRight.style.color = "white"
 }
+
+
+let quantityCart = 0;
+const buttonAdd = document.querySelectorAll('.addToCart');
+let listItem = document.getElementById('cartItem');
+let divElement = document.createElement('div')
+let quantityP = document.createElement('p');
+
+
+buttonAdd.forEach(button => {
+   button.addEventListener('click', () => {
+    quantityCart++;
+    quantityP.textContent = quantityCart;
+    divElement.classList.add('quantityDiv')
+    divElement.appendChild(quantityP);
+
+    listItem.appendChild(divElement)
+   })
+})
