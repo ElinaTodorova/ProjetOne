@@ -318,6 +318,7 @@ body .allProducts {
     z-index: 1;
     color: black;
     width: 100%;
+    justify-content: center;
 }
 
 .slider-nav a {
@@ -326,10 +327,10 @@ body .allProducts {
     border-radius: 50%;
     opacity: 0.75;
     transition: opacity ease 250ms;
-
+    background-color: #fff;
 }
 
-slider-nav a:hover {
+.slider-nav a:hover {
     opacity: 1;
 }
 
