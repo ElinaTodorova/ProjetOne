@@ -86,6 +86,7 @@ nav.desctopVersion {
     background-color: white;
     position: fixed;
     width: 100%; 
+    display: none;
 }
 
 nav.desctopVersion > ul {
@@ -142,16 +143,20 @@ nav.desctopVersion .logoImage > img {
 
 .desctopVersion .inputArea {
     width: 20rem;
+    height: 2rem;
+    
 }
 
 .desctopVersion input {
     border: none;
     border-radius: 15px;
     width: 100%;
-    padding: 0.3rem 0;
+    padding: 0.3rem;
+    height: 1.5rem;
     text-align: left;
     background-color: rgb(221, 224, 227);
     text-align: center;
+
 }
 
 .desctopVersion .signInItem,
