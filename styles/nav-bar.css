@@ -89,6 +89,7 @@ nav.desctopVersion {
     position: fixed;
     width: 100%;
     display: none;
+    z-index: 1;
 }
 
 nav.desctopVersion>ul {
@@ -160,7 +161,7 @@ nav.desctopVersion .logoImage>img {
 }
 
 .desctopVersion .signInItem,
-.desctopVersion .logInItem{
+.desctopVersion .logInItem {
     margin-right: 3rem;
 }
 
@@ -168,7 +169,7 @@ nav.desctopVersion .logoImage>img {
     width: 5rem;
 }
 
-.desctopVersion .signInItem > a {
+.desctopVersion .signInItem>a {
     width: 100%;
     border: 0.5px solid black;
     border-radius: 15%;
@@ -191,4 +192,3 @@ nav.desctopVersion .logoImage>img {
     }
 
 }
-

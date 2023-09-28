@@ -207,3 +207,6 @@ bntRight.onclick = function transform() {
     btnLeft.style.color = "orangered"
     bntRight.style.color = "white"
 }
+
+/* slide-------------------------------------------*/
+
