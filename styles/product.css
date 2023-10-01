@@ -138,6 +138,9 @@ body .allProducts {
     height: 8%;
     margin-left: 5%;
     font-weight: 900;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .container:hover {
