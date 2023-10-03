@@ -14,7 +14,7 @@ const productTable = [
     },
     {
         name: "Stars Wars",
-        price: 21,
+        price: 21.89,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
@@ -26,7 +26,7 @@ const productTable = [
     },
     {
         name: "StarField",
-        price: 50,
+        price: 50.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
@@ -38,7 +38,7 @@ const productTable = [
     },
     {
         name: "Baldur's Gate",
-        price: 40,
+        price: 40.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
@@ -50,13 +50,13 @@ const productTable = [
     },
     {
         name: "PAYDAY 3",
-        price: 27,
+        price: 27.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Lies of P",
-        price: 60,
+        price: 60.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
@@ -74,19 +74,19 @@ const productTable = [
     },
     {
         name: "Jagged Alliance 3",
-        price: 20,
+        price: 20.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Planet Zoo",
-        price: 30,
+        price: 30.00,
         img: "assets/callofduty.png",
         console: "XboxPS5 PC"
     },
     {
         name: "The Witcher",
-        price: 45,
+        price: 45.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
@@ -98,13 +98,13 @@ const productTable = [
     },
     {
         name: "Day Z",
-        price: 9,
+        price: 9.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Destiny 2",
-        price: 40,
+        price: 40.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
@@ -163,13 +163,33 @@ function createProduct(name, price, imgURL, platform) {
 
     let productPrice = document.createElement("p")
     productPrice.classList.add("poductPrice")
-    productPrice.innerHTML = price
+    productPrice.innerHTML = `${price.toFixed(2)}$`;
     boxProduct.appendChild(productPrice)
 
-    let addToCart = document.createElement("button")
-    addToCart.classList.add("addToCart")
-    addToCart.innerHTML = `Add to Cart`
-    boxProduct.appendChild(addToCart)
+    let addToCart = document.createElement("button");
+    addToCart.classList.add("addToCart");
+    const iconSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    const iconPath = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'path'
+    );
+
+    iconSvg.setAttribute('fill', 'white');
+    iconSvg.setAttribute('viewBox', '0 0 576 512');
+    iconSvg.setAttribute('stroke', 'black');
+    iconSvg.setAttribute('width', '1.5rem');
+    iconSvg.setAttribute('heigth', '1.5rem')
+    iconSvg.classList.add('cartItemP');
+
+    iconPath.setAttribute('d', 'M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z')
+    iconSvg.appendChild(iconPath);
+
+    let paragrapheAdd = document.createElement('p');
+    paragrapheAdd.textContent = 'Add to Cart';
+    
+    addToCart.appendChild(paragrapheAdd);
+    addToCart.appendChild(iconSvg)
+    boxProduct.appendChild(addToCart);
 
 
 }
@@ -213,6 +233,7 @@ const buttonAdd = document.querySelectorAll('.addToCart');
 let listItem = document.getElementById('cartItem');
 let divElement = document.createElement('div')
 let quantityP = document.createElement('p');
+let toastBoxElement = document.getElementById('toastBox');
 
 
 buttonAdd.forEach(button => {
@@ -222,8 +243,18 @@ buttonAdd.forEach(button => {
         divElement.classList.add('quantityDiv')
         divElement.appendChild(quantityP);
 
-        listItem.appendChild(divElement)
-    })
+        let toast = document.createElement('div');
+        toast.classList.add('toast');
+        toast.innerHTML = `Item successfully added to cart!`;
+    
+        toastBoxElement.appendChild(toast);
+        listItem.appendChild(divElement);
+    
+        setTimeout(() => {
+            toast.remove();
+        }, 5000)
+       })
+
 })
 
 // filter "Best Seller"=================== >
