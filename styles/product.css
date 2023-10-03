@@ -230,6 +230,10 @@ body .allProducts {
         font-weight: 900;
     }
 
+    .cartItemP {
+        display: none;
+    }
+
     .container:hover {
         scale: 1.05;
         background-color: white;
@@ -359,15 +363,32 @@ body .allProducts {
     opacity: 0.75;
     transition: opacity ease 250ms;
     background-color: #fff;
+
 }
 
 .slider-nav a:hover {
     opacity: 1;
 }
 
+.viewMore {
+    margin-left: 40%;
+    margin-top: 5%;
+    width: 20%;
+    border-radius: 30px;
+    padding: 1%;
+    color: #FE7A00;
+    border: solid #FE7A00;
+    background-color: #fff;
+}
+
+.viewMore:hover {
+    scale: 1.05;
+    transition: 0.2s;
+}
+
 footer {
     background-color: #cfcfcf;
-    margin-inline: 7.5%;
+
 
 }
 

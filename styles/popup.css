@@ -15,6 +15,7 @@
 .toast {
     width: 400px;
     height: 80px;
+    padding-left: 1rem;
     background-color: #fff;
     font-weight: 500;
     margin: 15px 0;
@@ -46,10 +47,5 @@
     100% {
         width: 0;
     }
-}
 
-.toast i {
-    margin: 0 20px;
-    font-size: 35px;
-    color: green;
 }

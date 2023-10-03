@@ -2,121 +2,121 @@ const productTable = [
 
     {
         name: "Call Of Duty",
-        price: "19.99$",
+        price: 19.99,
         img: "assets/callofduty.png",
         console: "Xbox"
     },
     {
         name: "Battle Field",
-        price: "9.99$",
+        price: 9.99,
         img: "assets/callofduty.png",
         console: "Xbox et pc"
     },
     {
         name: "Stars Wars",
-        price: "21$",
+        price: 21.89,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Red Dead",
-        price: "35.99$",
+        price: 35.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "StarField",
-        price: '50$',
+        price: 50.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "CyberPunk",
-        price: "24.99$",
+        price: 24.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Baldur's Gate",
-        price: "40$",
+        price: 40.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Counter Strike",
-        price: "19.99$",
+        price: 19.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "PAYDAY 3",
-        price: "27$",
+        price: 27.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Lies of P",
-        price: "60$",
+        price: 60.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Apex Legend",
-        price: "9.99$",
+        price: 9.99,
         img: "assets/callofduty.png",
         console: "XboxPS5 PC"
     },
     {
         name: "Resident evil 4",
-        price: "59.99$",
+        price: 59.99,
         img: "assets/callofduty.png",
         console: "XboxPS5 PC"
     },
     {
         name: "Jagged Alliance 3",
-        price: "20$",
+        price: 20.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Planet Zoo",
-        price: "30$",
+        price: 30.00,
         img: "assets/callofduty.png",
         console: "XboxPS5 PC"
     },
     {
         name: "The Witcher",
-        price: "45$",
+        price: 45.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Final Fantasy",
-        price: "49.99$",
+        price: 49.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Day Z",
-        price: "9$",
+        price: 9.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Destiny 2",
-        price: "40$",
+        price: 40.00,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Rust",
-        price: "39.99",
+        price: 39.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "The Sims 4",
-        price: "39.99$",
+        price: 39.99,
         img: "assets/callofduty.png",
         console: "Xbox PS5 PC"
     },
@@ -151,19 +151,19 @@ function createProduct(name, price, imgURL, platform) {
     boxProduct.appendChild(productImg);
 
 
-    let support = document.createElement("div");
+    let support = document.createElement("p");
     support.classList.add("console");
     support.innerHTML = `${platform}`
     boxProduct.appendChild(support)
 
-    let gameName = document.createElement("div");
+    let gameName = document.createElement("h3");
     gameName.classList.add("gameName")
     gameName.innerHTML = `${name}`
     boxProduct.appendChild(gameName)
 
-    let productPrice = document.createElement("div")
+    let productPrice = document.createElement("p")
     productPrice.classList.add("poductPrice")
-    productPrice.innerHTML = `${price}`
+    productPrice.innerHTML = `${price.toFixed(2)}$`;
     boxProduct.appendChild(productPrice)
 
     let addToCart = document.createElement("button");
@@ -235,6 +235,7 @@ let divElement = document.createElement('div')
 let quantityP = document.createElement('p');
 let toastBoxElement = document.getElementById('toastBox');
 
+
 buttonAdd.forEach(button => {
     button.addEventListener('click', () => {
         quantityCart++;
@@ -244,15 +245,55 @@ buttonAdd.forEach(button => {
 
         let toast = document.createElement('div');
         toast.classList.add('toast');
-        toast.innerHTML = `<i class="fa-solid fa-check"></i> Item successfully added to cart!`;
 
+        toast.innerHTML = `Item successfully added to cart!`;
+    
         toastBoxElement.appendChild(toast);
         listItem.appendChild(divElement);
-
+    
         setTimeout(() => {
             toast.remove();
         }, 5000)
-    })
+       })
+
 })
+
+// filter "Best Seller"=================== >
+
+const removeDiv = document.querySelectorAll('.container')
+
+
+const highPrice = productTable.filter((prices) => prices.price > 30)
+
+btnLeft.addEventListener("click", () => {
+    console.log("jb")
+    const removeDiv = document.querySelectorAll('.container')
+    removeDiv.forEach(container => {
+        container.remove()
+    })
+    highPrice.forEach((products) => {
+        createProduct(products.name, `${products.price} $`, products.img, products.console);
+    })
+});
+
+// filter "Newest"========================= >
+
+const lowPrice = productTable.filter((prices) => prices.price < 30)
+
+bntRight.addEventListener("click", () => {
+    console.log("Newest")
+    const removeDiv = document.querySelectorAll('.container')
+    removeDiv.forEach(container => {
+        container.remove()
+    })
+    lowPrice.forEach((products) => {
+        createProduct(products.name, `${products.price} $`, products.img, products.console);
+    })
+
+})
+
+
+
+
 
 
