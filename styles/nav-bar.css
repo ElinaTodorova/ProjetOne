@@ -133,6 +133,7 @@ nav.desctopVersion .imageItem>svg {
     width: 100%;
 }
 
+
 nav.desctopVersion .logoImage>img {
     border: 0.5px solid #adb1b4;
     border-radius: 50%;
@@ -170,10 +171,19 @@ nav.desctopVersion .logoImage>img {
     width: 5rem;
 }
 
+.imageItem>svg:hover {
+    fill: grey;
+}
+
 .desctopVersion .signInItem>a {
     width: 100%;
     border: 0.5px solid black;
     border-radius: 15%;
+}
+
+.signInLi :hover {
+    background-color: rgb(234, 234, 234);
+
 }
 
 
@@ -201,7 +211,7 @@ nav.desctopVersion .logoImage>img {
     position: relative;
 }
 
-.quantityDiv{
+.quantityDiv {
     position: absolute;
     top: 0;
     right: 0;
@@ -221,5 +231,3 @@ nav.desctopVersion .logoImage>img {
     color: rgb(254, 122, 0);
     font-weight: bold;
 }
-
-
