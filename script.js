@@ -163,7 +163,7 @@ function createProduct(name, price, imgURL, platform) {
 
     let productPrice = document.createElement("p")
     productPrice.classList.add("poductPrice")
-    productPrice.innerHTML = `${price.toFixed(2)}$`;
+    productPrice.innerHTML = `${price}$`;
     boxProduct.appendChild(productPrice)
 
     let addToCart = document.createElement("button");
@@ -195,7 +195,7 @@ function createProduct(name, price, imgURL, platform) {
 }
 
 productTable.forEach((product) => {
-    createProduct(product.name, product.price, product.img, product.console);
+    createProduct(product.name, product.price.toFixed(2), product.img, product.console);
 });
 
 
@@ -271,7 +271,7 @@ btnLeft.addEventListener("click", () => {
         container.remove()
     })
     highPrice.forEach((products) => {
-        createProduct(products.name, `${products.price} $`, products.img, products.console);
+        createProduct(products.name, `${products.price.toFixed(2)} `, products.img, products.console);
     })
 });
 
@@ -286,7 +286,7 @@ bntRight.addEventListener("click", () => {
         container.remove()
     })
     lowPrice.forEach((products) => {
-        createProduct(products.name, `${products.price} $`, products.img, products.console);
+        createProduct(products.name, `${products.price.toFixed(2)}`, products.img, products.console);
     })
 
 })
