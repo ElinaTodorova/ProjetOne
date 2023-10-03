@@ -70,6 +70,7 @@ body .allProducts {
     transition: 0.5s;
     position: relative;
     font-weight: 900;
+    color: #FE7A00;
 
 }
 
@@ -259,6 +260,33 @@ body .allProducts {
     .productImg {
         height: 100%;
     }
+
+    .crossImg {
+        display: none;
+    }
+
+    .crossImg img {
+        display: none;
+    }
+
+    .slideBox {
+        display: flex;
+        width: 150%;
+    }
+
+    #titleProducts {
+        font-size: 200%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+    .form-box {
+        margin-bottom: 5%;
+    }
+
+    .important {
+        display: none;
+    }
 }
 
 /* slide ====================================================*/
@@ -331,15 +359,32 @@ body .allProducts {
     opacity: 0.75;
     transition: opacity ease 250ms;
     background-color: #fff;
+
 }
 
 .slider-nav a:hover {
     opacity: 1;
 }
 
+.viewMore {
+    margin-left: 40%;
+    margin-top: 5%;
+    width: 20%;
+    border-radius: 30px;
+    padding: 1%;
+    color: #FE7A00;
+    border: solid #FE7A00;
+    background-color: #fff;
+}
+
+.viewMore:hover {
+    scale: 1.05;
+    transition: 0.2s;
+}
+
 footer {
     background-color: #cfcfcf;
-    margin-inline: 7.5%;
+
 
 }
 
