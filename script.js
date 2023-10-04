@@ -258,7 +258,8 @@ bntRight.addEventListener("click", () => {
     })
     lowPrice.forEach((products) => {
         createProduct(products.name, `${products.price.toFixed(2)}`, products.img, products.console);
-    })
+    });
+    popup();
 
 });
 
