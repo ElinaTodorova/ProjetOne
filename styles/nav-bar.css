@@ -6,6 +6,10 @@ nav.mobileVersion {
     background-color: white;
 }
 
+* {
+    border: red, solid, 2px;
+}
+
 nav.mobileVersion ul li {
     list-style: none;
 }
@@ -77,126 +81,98 @@ nav.mobileVersion .visible>li {
 }
 
 nav.mobileVersion {
-    display: block;
+    display:block;
 }
 
+nav.desktopVersion {
+    display: none;
+}
 
 /* Nav Desctop Verion */
-nav.desctopVersion {
-    height: 4rem;
-    padding: 0 5rem;
-    background-color: white;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    display: none;
-    z-index: 1;
-   
-}
-
-nav.desctopVersion>ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-}
-
-.LogoAndTitle,
-.userInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-nav.desctopVersion ul li {
-    list-style: none;
-}
-
-nav.desctopVersion ul li>a {
-    text-decoration: none;
-    color: black;
-}
-
-nav.desctopVersion .logoImage {
-    width: 3.5rem;
-    height: 3.5rem;
-}
-
-nav.desctopVersion .imageItem {
-    width: 2rem;
-    height: 2rem;
-}
-
-nav.desctopVersion .logoImage>img,
-nav.desctopVersion .imageItem>svg {
-    width: 100%;
-}
-
-
-nav.desctopVersion .logoImage>img {
-    border: 0.5px solid #adb1b4;
-    border-radius: 50%;
-}
-
-.titleSila {
-    font-size: 2rem;
-    background: -webkit-linear-gradient(rgba(254, 122, 0, 1), rgba(32, 95, 219, 1));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.desctopVersion .inputArea {
-    width: 30rem;
-    height: 2.5rem;
-}
-
-.desctopVersion input {
-    border: none;
-    border-radius: 15px;
-    width: 100%;
-    padding: 0.5rem;
-    /*height: 1.5rem;*/
-    background-color: rgb(221, 224, 227);
-    text-align: center;
-
-}
-
-.desctopVersion .signInItem,
-.desctopVersion .logInItem {
-    margin-right: 3rem;
-}
-
-.desctopVersion .signInItem {
-    width: 5rem;
-}
-
-.imageItem>svg:hover {
-    fill: grey;
-}
-
-.desctopVersion .signInItem>a {
-    width: 100%;
-    border: 0.5px solid black;
-    border-radius: 15%;
-}
-
-.signInLi :hover {
-    background-color: rgb(234, 234, 234);
-
-}
-
-
-.desctopVersion .signInItem {
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 0 1rem;
-}
 
 @media screen and (width > 768px) {
-    nav.desctopVersion {
-        display: block;
+    nav.desktopVersion {
+        height: 4rem;
+        background-color: white;
+        padding: 0 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+       
+       
+    }
+    
+    
+    .logoImg {
+        width: 3.5rem;
+        height: 3.5rem;
+        border: 0.5px solid #adb1b4;
+        border-radius: 50%;
+    }
+    
+    
+    .logoAndTitle {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .userInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem
+    }
+    
+    nav.desktopVersion .userInfo > a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .signInItem, .logInItem {
+        margin-right: 3rem;
+    }
+    
+    #itemCart {
+        fill : black;
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    #itemCart:hover {
+        fill: grey;
+    }
+    
+    .titleSila {
+        font-size: 2rem;
+        background: -webkit-linear-gradient(rgba(254, 122, 0, 1), rgba(32, 95, 219, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    input {
+        width: 30rem;
+        height: 2rem;
+        border: none;
+        border-radius: 15px;
+        padding: 0.5rem;
+        /*height: 1.5rem;*/
+        background-color: rgb(221, 224, 227);
+        text-align: center;
+    }
+    
+    .signInItem {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 0 1rem;
+    }
+    
+    .signInItem:hover {
+        background-color: rgb(234, 234, 234);
     }
 
     nav.mobileVersion {
@@ -208,7 +184,7 @@ nav.desctopVersion .logoImage>img {
 
 /* Quantity items in cart*/
 
-#cartItem {
+#itemCart {
     position: relative;
 }
 

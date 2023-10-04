@@ -230,7 +230,7 @@ bntRight.onclick = function transform() {
 
 let quantityCart = 0;
 const buttonAdd = document.querySelectorAll('.addToCart');
-let listItem = document.getElementById('cartItem');
+let listItem = document.getElementById('itemCart');
 let divElement = document.createElement('div')
 let quantityP = document.createElement('p');
 let toastBoxElement = document.getElementById('toastBox');
