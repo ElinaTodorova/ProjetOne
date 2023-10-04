@@ -262,6 +262,7 @@ bntRight.addEventListener("click", () => {
     popup();
 
 });
+// slide price =============================>
 
 let inputPrice = document.getElementById('pi_input');
 let value = document.getElementById('value');
@@ -324,7 +325,7 @@ function refresh(){
     inputPrice.value ="60"
 }
 
-refresh()
+refresh()   //function for refresh slide value while page is refreshing
 
 
 
