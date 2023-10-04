@@ -396,3 +396,10 @@ footer p {
     margin-top: 10%;
     margin-left: 7.5%;
 }
+
+.buttonAndRangeContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 7.5%;
+}

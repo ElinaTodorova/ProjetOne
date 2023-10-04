@@ -124,9 +124,6 @@ const productTable = [
 ]
 
 let allProducts = document.querySelector(".allProducts")
-console.log(productTable)
-
-
 
 
 function createProduct(name, price, imgURL, platform) {
@@ -198,6 +195,8 @@ productTable.forEach((product) => {
     createProduct(product.name, product.price.toFixed(2), product.img, product.console);
 });
 
+popup();
+
 
 const menuElement = document.getElementById("menuEl");
 
@@ -228,16 +227,76 @@ bntRight.onclick = function transform() {
 };
 
 
+// filter "Best Seller"=================== >
+
+const removeDiv = document.querySelectorAll('.container')
+
+
+const highPrice = productTable.filter((prices) => prices.price > 30)
+
+btnLeft.addEventListener("click", () => {
+    console.log("jb")
+    const removeDiv = document.querySelectorAll('.container')
+    removeDiv.forEach(container => {
+        container.remove()
+    })
+    highPrice.forEach((products) => {
+        createProduct(products.name, `${products.price.toFixed(2)} `, products.img, products.console);
+    })
+    popup();
+});
+
+// filter "Newest"========================= >
+
+const lowPrice = productTable.filter((prices) => prices.price < 30)
+
+bntRight.addEventListener("click", () => {
+    console.log("Newest")
+    const removeDiv = document.querySelectorAll('.container')
+    removeDiv.forEach(container => {
+        container.remove()
+    })
+    lowPrice.forEach((products) => {
+        createProduct(products.name, `${products.price.toFixed(2)}`, products.img, products.console);
+    })
+
+});
+
+let inputPrice = document.getElementById('pi_input');
+let value = document.getElementById('value');
+
+inputPrice.addEventListener('input', (e) => {
+    value.textContent = `${inputPrice.value}$`;
+
+    maxPrice = inputPrice.value;
+    let itemsWithinTheMaxPrice = productTable.filter((element) => element.price < maxPrice );
+
+    const removeDiv = document.querySelectorAll('.container')
+    removeDiv.forEach(container => {
+        container.remove()
+    })
+    itemsWithinTheMaxPrice.forEach((products) => {
+        createProduct(products.name, `${products.price.toFixed(2)} `, products.img, products.console);
+    })
+
+    popup();
+
+});
+
 let quantityCart = 0;
+
+function popup() {
+
+
 const buttonAdd = document.querySelectorAll('.addToCart');
 let listItem = document.getElementById('itemCart');
 let divElement = document.createElement('div')
 let quantityP = document.createElement('p');
 let toastBoxElement = document.getElementById('toastBox');
 
-
 buttonAdd.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
         quantityCart++;
         quantityP.textContent = quantityCart;
         divElement.classList.add('quantityDiv')
@@ -257,40 +316,9 @@ buttonAdd.forEach(button => {
        })
 
 })
-
-// filter "Best Seller"=================== >
-
-const removeDiv = document.querySelectorAll('.container')
+}
 
 
-const highPrice = productTable.filter((prices) => prices.price > 30)
-
-btnLeft.addEventListener("click", () => {
-    console.log("jb")
-    const removeDiv = document.querySelectorAll('.container')
-    removeDiv.forEach(container => {
-        container.remove()
-    })
-    highPrice.forEach((products) => {
-        createProduct(products.name, `${products.price.toFixed(2)} `, products.img, products.console);
-    })
-});
-
-// filter "Newest"========================= >
-
-const lowPrice = productTable.filter((prices) => prices.price < 30)
-
-bntRight.addEventListener("click", () => {
-    console.log("Newest")
-    const removeDiv = document.querySelectorAll('.container')
-    removeDiv.forEach(container => {
-        container.remove()
-    })
-    lowPrice.forEach((products) => {
-        createProduct(products.name, `${products.price.toFixed(2)}`, products.img, products.console);
-    })
-
-})
 
 
 
