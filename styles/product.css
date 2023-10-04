@@ -230,6 +230,10 @@ body .allProducts {
         font-weight: 900;
     }
 
+    .cartItemP {
+        display: none;
+    }
+
     .container:hover {
         scale: 1.05;
         background-color: white;

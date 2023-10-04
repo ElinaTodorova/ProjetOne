@@ -9,115 +9,115 @@ const productTable = [
     {
         name: "Battle Field",
         price: 9.99,
-        img: "assets/callofduty.png",
+        img: "assets/battlefield.png",
         console: "Xbox et pc"
     },
     {
         name: "Stars Wars",
         price: 21.89,
-        img: "assets/callofduty.png",
+        img: "assets/starwars.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Red Dead",
         price: 35.99,
-        img: "assets/callofduty.png",
+        img: "assets/reddead.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "StarField",
         price: 50.00,
-        img: "assets/callofduty.png",
+        img: "assets/starfield.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "CyberPunk",
         price: 24.99,
-        img: "assets/callofduty.png",
+        img: "assets/cyberpunk.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Baldur's Gate",
         price: 40.00,
-        img: "assets/callofduty.png",
+        img: "assets/baldurs.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Counter Strike",
         price: 19.99,
-        img: "assets/callofduty.png",
+        img: "assets/counterstrike.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "PAYDAY 3",
         price: 27.99,
-        img: "assets/callofduty.png",
+        img: "assets/payday3.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Lies of P",
         price: 60.00,
-        img: "assets/callofduty.png",
+        img: "assets/liesofp.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Apex Legend",
         price: 9.99,
-        img: "assets/callofduty.png",
+        img: "assets/apexlegend.png",
         console: "XboxPS5 PC"
     },
     {
         name: "Resident evil 4",
         price: 59.99,
-        img: "assets/callofduty.png",
+        img: "assets/residentevil4.png",
         console: "XboxPS5 PC"
     },
     {
         name: "Jagged Alliance 3",
         price: 20.00,
-        img: "assets/callofduty.png",
+        img: "assets/jaggedalliance.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Planet Zoo",
         price: 30.00,
-        img: "assets/callofduty.png",
+        img: "assets/planetzoo.png",
         console: "XboxPS5 PC"
     },
     {
         name: "The Witcher",
         price: 45.99,
-        img: "assets/callofduty.png",
+        img: "assets/thewitcher3.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Final Fantasy",
         price: 49.99,
-        img: "assets/callofduty.png",
+        img: "assets/finalfantaisy.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Day Z",
         price: 9.99,
-        img: "assets/callofduty.png",
+        img: "assets/dayz.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Destiny 2",
         price: 40.00,
-        img: "assets/callofduty.png",
+        img: "assets/destiny2.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "Rust",
         price: 39.99,
-        img: "assets/callofduty.png",
+        img: "assets/rust.png",
         console: "Xbox PS5 PC"
     },
     {
         name: "The Sims 4",
         price: 39.99,
-        img: "assets/callofduty.png",
+        img: "assets/sims4.png",
         console: "Xbox PS5 PC"
     },
 
@@ -230,7 +230,7 @@ bntRight.onclick = function transform() {
 
 let quantityCart = 0;
 const buttonAdd = document.querySelectorAll('.addToCart');
-let listItem = document.getElementById('cartItem');
+let listItem = document.getElementById('itemCart');
 let divElement = document.createElement('div')
 let quantityP = document.createElement('p');
 let toastBoxElement = document.getElementById('toastBox');
@@ -245,6 +245,7 @@ buttonAdd.forEach(button => {
 
         let toast = document.createElement('div');
         toast.classList.add('toast');
+
         toast.innerHTML = `Item successfully added to cart!`;
     
         toastBoxElement.appendChild(toast);
