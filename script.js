@@ -124,9 +124,6 @@ const productTable = [
 ]
 
 let allProducts = document.querySelector(".allProducts")
-console.log(productTable)
-
-
 
 
 function createProduct(name, price, imgURL, platform) {
@@ -290,7 +287,30 @@ bntRight.addEventListener("click", () => {
         createProduct(products.name, `${products.price.toFixed(2)}`, products.img, products.console);
     })
 
-})
+});
+
+let inputPrice = document.getElementById('pi_input');
+let value = document.getElementById('value');
+//let maxPrice = 0;
+
+inputPrice.addEventListener('input', (e) => {
+    value.textContent = `${inputPrice.value}$`;
+
+    maxPrice = inputPrice.value;
+    let itemsWithinTheMaxPrice = productTable.filter((element) => element.price < maxPrice );
+
+    const removeDiv = document.querySelectorAll('.container')
+    removeDiv.forEach(container => {
+        container.remove()
+    })
+    itemsWithinTheMaxPrice.forEach((products) => {
+        createProduct(products.name, `${products.price.toFixed(2)} `, products.img, products.console);
+    })
+
+
+});
+
+
 
 
 

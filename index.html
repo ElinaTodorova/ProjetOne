@@ -79,16 +79,22 @@
         <h2 id="titleProducts">Our Products</h2>
 
 
-        <div class="form-box">
-            <div class="button-box">
-                <div class="btn-translate"></div>
-                <button type="button" class="toggle-btn" id="btn-left">
-                    Best Seller
-                </button>
-                <button type="button" class="toggle-btn" id="btn-right">
-                    Newest</button>
+        <div class="buttonAndRangeContainer">
+            <div class="form-box">
+                <div class="button-box">
+                    <div class="btn-translate"></div>
+                    <button type="button" class="toggle-btn" id="btn-left">
+                        Best Seller
+                    </button>
+                    <button type="button" class="toggle-btn" id="btn-right">
+                        Newest</button>
 
+                </div>
             </div>
+
+            <div>
+                <input id="pi_input" type="range" min="0" max="60" step="1" />
+                <p>Max-price: <output id="value" valeur="60">60$</output></p></div>
         </div>
     </div>
 
