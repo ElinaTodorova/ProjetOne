@@ -320,10 +320,11 @@ buttonAdd.forEach(button => {
 }
 
 
+function refresh(){
+    inputPrice.value ="60"
+}
 
-
-
-
+refresh()
 
 
 
