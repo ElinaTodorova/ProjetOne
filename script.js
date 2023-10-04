@@ -195,6 +195,8 @@ productTable.forEach((product) => {
     createProduct(product.name, product.price.toFixed(2), product.img, product.console);
 });
 
+popup();
+
 
 const menuElement = document.getElementById("menuEl");
 
@@ -225,36 +227,6 @@ bntRight.onclick = function transform() {
 };
 
 
-let quantityCart = 0;
-const buttonAdd = document.querySelectorAll('.addToCart');
-let listItem = document.getElementById('itemCart');
-let divElement = document.createElement('div')
-let quantityP = document.createElement('p');
-let toastBoxElement = document.getElementById('toastBox');
-
-
-buttonAdd.forEach(button => {
-    button.addEventListener('click', () => {
-        quantityCart++;
-        quantityP.textContent = quantityCart;
-        divElement.classList.add('quantityDiv')
-        divElement.appendChild(quantityP);
-
-        let toast = document.createElement('div');
-        toast.classList.add('toast');
-
-        toast.innerHTML = `Item successfully added to cart!`;
-    
-        toastBoxElement.appendChild(toast);
-        listItem.appendChild(divElement);
-    
-        setTimeout(() => {
-            toast.remove();
-        }, 5000)
-       })
-
-})
-
 // filter "Best Seller"=================== >
 
 const removeDiv = document.querySelectorAll('.container')
@@ -271,6 +243,7 @@ btnLeft.addEventListener("click", () => {
     highPrice.forEach((products) => {
         createProduct(products.name, `${products.price.toFixed(2)} `, products.img, products.console);
     })
+    popup();
 });
 
 // filter "Newest"========================= >
@@ -291,7 +264,6 @@ bntRight.addEventListener("click", () => {
 
 let inputPrice = document.getElementById('pi_input');
 let value = document.getElementById('value');
-//let maxPrice = 0;
 
 inputPrice.addEventListener('input', (e) => {
     value.textContent = `${inputPrice.value}$`;
@@ -307,8 +279,44 @@ inputPrice.addEventListener('input', (e) => {
         createProduct(products.name, `${products.price.toFixed(2)} `, products.img, products.console);
     })
 
+    popup();
 
 });
+
+let quantityCart = 0;
+
+function popup() {
+
+
+const buttonAdd = document.querySelectorAll('.addToCart');
+let listItem = document.getElementById('itemCart');
+let divElement = document.createElement('div')
+let quantityP = document.createElement('p');
+let toastBoxElement = document.getElementById('toastBox');
+
+buttonAdd.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        quantityCart++;
+        quantityP.textContent = quantityCart;
+        divElement.classList.add('quantityDiv')
+        divElement.appendChild(quantityP);
+
+        let toast = document.createElement('div');
+        toast.classList.add('toast');
+
+        toast.innerHTML = `Item successfully added to cart!`;
+    
+        toastBoxElement.appendChild(toast);
+        listItem.appendChild(divElement);
+    
+        setTimeout(() => {
+            toast.remove();
+        }, 5000)
+       })
+
+})
+}
 
 
 
