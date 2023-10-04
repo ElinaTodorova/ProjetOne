@@ -26,6 +26,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(194, 194, 194,.5);
 
 }
 h2{
@@ -104,6 +105,11 @@ button{
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
+    color: #fff;
+}
+
+button:hover{
+    scale: 1.05;
 }
 .register{
     font-size: .9em;
@@ -118,4 +124,29 @@ button{
 }
 .register p a:hover{
     text-decoration: underline;
+}
+
+h2{
+    color: #1e88e5;
+}
+
+.homeButton{
+    width: 50%;
+    margin-top: 5%;
+    background-color: #fa7d07;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 25%;
+    color: #fff;
+    
+}
+
+.loginPage{
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
 }
