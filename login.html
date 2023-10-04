@@ -20,20 +20,19 @@
                 <h2> Login</h2>
                 <div class="inputbox">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input type="email" required>
-                    <label for="">email</label>
-                    
+                    <input type="email" placeholder=" " required id="email">
+                    <label for="email">Email</label>
                 </div>
                 <div class="inputbox">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" required>
-                    <label for="">password</label>            
+                    <input type="password" placeholder=" " required id="password">
+                    <label for="password">Mot de passe</label>
                 </div>
                 <div class="forget">
                     <label for=""><input type="checkbox">Se souvenir de moi</label>
                     <a href="#">mots de passe oubliée</a>
                 </div> 
-                <button>Log in</button>
+               <button class="loginButton"  onclick="location.href='index.html';" ><a class="link" href="index.html">Log in</a> </button>
                 <div class="Register"></div>
                 <p>j'ai pas de compte <a href="#">Registrer</a></p>
                 <a  class="homeButton" href="index.html">Home</a>
@@ -41,7 +40,7 @@
         </div>
         
     </section>
-    
+    <script src="script.js" ></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

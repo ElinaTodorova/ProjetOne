@@ -106,6 +106,7 @@ button{
     font-size: 1em;
     font-weight: 600;
     color: #fff;
+    transition: 250ms;
 }
 
 button:hover{
@@ -149,4 +150,15 @@ h2{
 .form{
     display: flex;
     flex-direction: column;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #0077b6;
+}
+
+a{
+    text-decoration: none;
 }
