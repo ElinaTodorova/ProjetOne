@@ -16,14 +16,16 @@
     width: 400px;
     height: 80px;
     padding-left: 1rem;
-    background-color: #fff;
+    background-color: rgba(204, 204, 204, 0.7);
     font-weight: 500;
     margin: 15px 0;
-    box-shadow: 0 0 20px rgba(0,0,0.3);
+    box-shadow: 10px 5px 5px rgb(144, 143, 143);
     display: flex;
     align-items: center;
     transform: translateX(100%);
     animation: moveleft 0.5s linear forwards;
+    border-radius: 10px;
+    color: rgb(2, 69, 2);
 }
 
 @keyframes moveleft {
